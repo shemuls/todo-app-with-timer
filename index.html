@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <title>To Do App</title>
+    <style>
+        *{
+            font-family: Poppins;
+        }
+        .black{
+            background-color: #000;
+        }
+        .card{
+            background-color: rgba(31, 31, 35, 0.8);
+            padding: 0px 20px;
+        }
+        section{
+            margin-bottom: 20px;
+        }
+        .bajar-list-item{
+            margin-bottom: 15px;
+        }
+        .countDownItem{
+            background-color: #000;
+            padding: 5px 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Header area start -->
+    <header class="bg-dark py-2 text-center text-light">
+        <div id="today-date"></div>
+        <div id="digital-clock"></div>
+    </header>
+
+    <!-- Main Area -->
+    <div style="min-height: 100vh;" class="main-area black py-4 text-light">
+        <!-- counter area -->
+        <section class="counter-area">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <div class="card bg-primary py-2">Total Tasks </br><span id="itemCounter">0</span></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card bg-danger py-2">Running <br><span id="itemDoCounter">0</span></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card bg-success py-2">Done <br><span id="itemDoneCounter">0</span></div>
+                    </div>
+                    <div class="col-3" style="display: none;">
+                        <div class="card bg-info py-2">Cost <br><span id="itemTotalCost">100</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- add item form area -->
+        <section class="input-form-area">
+            <div class="container">
+                <div class="card p-3">
+                    <div class="row mx-1">
+                        <p>Add Task</p>
+                    </div>
+                    <div class="row mx-1">
+                        <form id="itemSubmitForm" style="width: 100%;">
+                            <div class="d-md-flex justify-content-around ">
+                                
+                                    <div class="m-2">
+                                        <input required name="workName" id="workName" type="text" class="form-control rounded-0 bg-dark border-1 border-dark text-light" placeholder="Work Title">
+                                    </div>
+                                    <div class="m-2">
+                                        <input required name="clientName" id="clientName" type="text" class="form-control rounded-0 bg-dark border-1 border-dark text-light" placeholder="Client Name">
+                                    </div>
+                                    <div class="m-2">
+                                        <input required name="endDate" id="endDate" type="date" class="form-control rounded-0 bg-dark border-1 border-dark text-light" placeholder="Start from">
+                                    </div>
+                                    <div class="m-2">
+                                        <input required name="endTime" id="endTime" type="time" class="form-control rounded-0 bg-dark border-1 border-dark text-light" placeholder="End from">
+                                    </div>
+                                    <div class="m-2">
+                                        <button class="form-control rounded-0 bg-info border-0 text-light"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bajar list area -->
+        <section class="bajar-list-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div id="todo-list-items">
+
+                            
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    
+
+    <!-- Bootstrap js -->
+    <script src="assets/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/popper.min.js"></script>
+
+    <!-- Our custom Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
